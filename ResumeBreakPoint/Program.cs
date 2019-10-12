@@ -2,6 +2,9 @@
 using System;
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Xly.LBC.ResumeBreakPoint
 {
@@ -10,29 +13,27 @@ namespace Xly.LBC.ResumeBreakPoint
         static void Main(string[] args)
         {
 
-            string path = AppDomain.CurrentDomain.BaseDirectory;
+            string path = @"C:\Users\fuxuyang\Desktop\Download\";
             string[] urlList =
             {
-               // "http://xlyuntech-graysystem-test.oss-cn-beijing.aliyuncs.com/software/bossAssistant_v2.1.1_release_2019081216-1565598720304.apk",
-               // "http://xlyuntech-graysystem-test.oss-cn-beijing.aliyuncs.com/software/pos-3.4.3-update-1570600539626.zip",
-                //"http://xlyuntech-graysystem-test.oss-cn-beijing.aliyuncs.com/software/LBC3.5.3_Gray_Product-1570760779216.zip"
                 "http://xlyuntech-graysystem-test.oss-cn-beijing.aliyuncs.com/software/LBC3.5.3_Gray-1569390321231.zip"
             };
 
             DownLoadFileHelper downLoadFileHelper = new DownLoadFileHelper();
-            downLoadFileHelper.SetPerRange(1024 * 20);
+            downLoadFileHelper.SetMaxPerRange(1024 * 1024);
+            downLoadFileHelper.SetPerRange(1024 * 1024);
+            downLoadFileHelper.SetThreadNum(2);
+
+            Action<long, long> action = (p, q) =>
+            {
+                Console.WriteLine($"下载文件大小：{Math.Round((decimal)q / 1024 / 1024, 2)}MB;已下载：{Math.Round((decimal)p / 1024 / 1024, 2)}MB;下载进度：{Math.Round((decimal)p * 100 / q, 2)}%");
+            };
             foreach (var item in urlList)
             {
-                
-                downLoadFileHelper.DownLoadFile(item, path);
+
+                downLoadFileHelper.MutleThreadDownLoadFile(item, path, action);
+                Console.WriteLine("下载完成");
             }
-
-
-            //DownLoadData("http://xlyuntech-graysystem-test.oss-cn-beijing.aliyuncs.com/software/bossAssistant_v2.1.1_release_2019081216-1565598720304.apk", AppDomain.CurrentDomain.BaseDirectory);
-
-
-
-
         }
         public static void DownLoadData(string url, string savePath)
         {

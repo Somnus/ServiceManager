@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="MutleThreadDownloadHelper.cs" />
+  </ItemGroup>
+
 </Project>
