@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceManager", "ServiceMa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceUpdate", "ServiceUpdate\ServiceUpdate.csproj", "{FD533230-9370-4B80-BDBD-50A4867B2978}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResumeBreakPoint", "ResumeBreakPoint\ResumeBreakPoint.csproj", "{6AA56D10-9F2D-4590-B122-0F295E6FA9BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResumeBreakPoint", "ResumeBreakPoint\ResumeBreakPoint.csproj", "{6AA56D10-9F2D-4590-B122-0F295E6FA9BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileEncryptManager", "FileEncryptManager\FileEncryptManager.csproj", "{D9F82B48-D588-448C-8080-1F28F3A53698}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionTimer", "ExtensionTimer\ExtensionTimer.csproj", "{6CCFDA28-BF8B-4E1D-A843-4A740DB5798D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{6AA56D10-9F2D-4590-B122-0F295E6FA9BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AA56D10-9F2D-4590-B122-0F295E6FA9BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AA56D10-9F2D-4590-B122-0F295E6FA9BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9F82B48-D588-448C-8080-1F28F3A53698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F82B48-D588-448C-8080-1F28F3A53698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F82B48-D588-448C-8080-1F28F3A53698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F82B48-D588-448C-8080-1F28F3A53698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CCFDA28-BF8B-4E1D-A843-4A740DB5798D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCFDA28-BF8B-4E1D-A843-4A740DB5798D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCFDA28-BF8B-4E1D-A843-4A740DB5798D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCFDA28-BF8B-4E1D-A843-4A740DB5798D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
