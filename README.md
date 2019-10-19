@@ -1,2 +1,5 @@
-# ServiceManager
-使用webapi管理window服务
+- `ExtensionTimer`简单扩展Timer以实现定时任务（例如：每天下午6备份数据库）。
+- `FileEncryptManager`因公司好几台电脑被木马非法加密而做的文件加密解密尝试Demo。
+- `ResumeBreakPonit`断点续传实现demo代码，包括基础断点续传与多线程场景，多线程场景未处理好。
+- `ServiceManager`API实现对windows服务管理的尝试demo。
+- `ServiceUpdate`简单的文件解压缩记录。
